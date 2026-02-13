@@ -1,43 +1,42 @@
-# 🎓 CampusHub
+# CampusHub
 
-CampusHub is a full-stack campus communication platform that centralizes announcements and events into a single portal.
+CampusHub is a full-stack campus communication platform that centralizes announcements and events into a single web portal.
 
-It solves the problem of fragmented communication across emails, WhatsApp groups, and notice boards.
+It addresses fragmented communication across emails, messaging groups, and notice boards by providing a unified system for students and administrators.
 
 
 ## Features
 
 - Role-based login (Admin / Student)
-- Admin can create announcements
-- Events listing
-- React frontend
-- Spring Boot REST API backend
-- MySQL database integration
+- Admin-only announcement creation
+- Event listing
+- REST API integration
+- Persistent data storage with MySQL
+- Frontend–backend communication via HTTP requests
 
 
 ## Tech Stack
 
-Frontend:
+### Frontend
 - React
 - CSS
 
-Backend:
+### Backend
 - Spring Boot
 - Spring Data JPA
 - REST APIs
 
-Database:
+### Database
 - MySQL
 
 
+## Architecture
 
-##Architecture
-
-React (Port 3000)
-    ↓ fetch
-Spring Boot API (Port 8082)
-    ↓ JPA
-MySQL Database
+React (Port 3000)  
+→ HTTP requests (fetch)  
+→ Spring Boot API (Port 8082)  
+→ JPA  
+→ MySQL Database  
 
 
 ## How to Run
@@ -48,30 +47,44 @@ MySQL Database
 cd campushub
 mvn spring-boot:run
 
-### runs on
+
+Runs on:
+
 http://localhost:8082
 
-### FRONTEND
+
+
+
+### Frontend
+
+```bash
 cd campushub-frontend
 npm install
 npm start
 
-###runs on
+
+Runs on:
+
 http://localhost:3000
 
-### DEMO login
-Admin: 
-username: admin
-password: anything
 
-user:
-username: anything else
-password: anything
+## Demo Login
 
-## 📷 Screenshots
+Admin  
+Username: admin  
+Password: any value  
+
+Student  
+Username: any other value  
+Password: any value  
+
+
+## Screenshots
 
 ### Login Page
 ![Login](screenshots/login.png)
 
 ### Dashboard
 ![Dashboard](screenshots/dashboard.png)
+
+
